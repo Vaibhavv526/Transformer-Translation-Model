@@ -17,9 +17,12 @@ def causal_mask(size):
 
 
 # ---------------- DEVICE ----------------
-device = torch.device(
-    "cuda" if torch.cuda.is_available() else "cpu"
-)
+#device = torch.device(
+#    "cuda" if torch.cuda.is_available() else "cpu"
+#)
+
+# Editing the cuda from gpt to cpu dependent so it will deploy on render 
+device = torch.device("cpu")
 
 print("Using device:", device)
 
