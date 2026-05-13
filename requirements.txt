@@ -1,5 +1,11 @@
 torch
-datasets
 tokenizers
 tqdm
 tensorboard
+torchmetrics
+datasets
+fastapi
+uvicorn
+numpy
+pandas
+altair
