@@ -58,16 +58,16 @@ model = Build_Transformer(
 
 
 # ---------------- LOAD WEIGHTS ----------------
-model_filename = latest_weights_file_path(config)
+model_filename = "weights/best_model.pt"
 
 print(f"Loading model: {model_filename}")
 
-state = torch.load(
+state_dict = torch.load(
     model_filename,
     map_location=device
 )
 
-model.load_state_dict(state['model_state_dict'])
+model.load_state_dict(state_dict)
 
 # IMPORTANT
 model.eval()
